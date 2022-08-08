@@ -1,0 +1,38 @@
+// media mixins
+@mixin very-small {
+  @media screen and (max-width: 370px) {
+      @content;
+  }
+}
+@mixin small {
+  @media screen and (max-width: 526px) {
+      @content;
+  }
+}
+@mixin medium {
+  @media screen and (max-width: 768px) {
+      @content;
+  }
+}
+@mixin large {
+  @media screen and (max-width: 960px) {
+      @content;
+  }
+}
+@mixin notebook {
+  @media screen and (max-width: 1440px) {
+      @content;
+  }
+}
+
+// ----------
+@mixin link {
+  font-family:$secondaryFont, serif;
+  font-size: $textFs;
+  font-weight: $regular;
+  transition: 0.3s;
+  &:hover{
+    color: $primaryColor;
+    font-weight: $bold;
+  }
+}

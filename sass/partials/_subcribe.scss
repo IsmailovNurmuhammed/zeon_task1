@@ -1,0 +1,73 @@
+.subcribe{
+  background: #E2EEEA;
+  &__content{
+    max-width: 791px;
+    margin: 0 auto;
+    padding: 65px 0;
+   }
+ }
+
+.subscribe__info {
+    max-width: 774px;
+    text-align: center;
+}
+.subscribe__title {
+  text-transform: uppercase;
+  font-family: $primaryFont, serif;
+  font-weight: $bold;
+  font-size: $titleFs;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  margin-bottom: 16px;
+}
+.subscribe__text {
+  font-family: $secondaryFont, serif;
+  max-width: 691px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+.subcribe__form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input{
+    padding: 0 26px;
+    outline: none;
+    border: none;
+    height: 55px;
+    border: 1px solid transparent;
+    &:focus{
+      border: 1px solid $primaryColor;
+    }
+    &::placeholder{
+      font-style: italic;
+    }
+  }
+  .subcribe__form_name{
+    width: 245px;
+    box-sizing: border-box;
+  }
+  .subcribe__form_email{
+    width: 368px;
+    box-sizing: border-box;
+  }
+  .subcribe__form_btn{
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $primaryFont, serif;
+    font-weight: $bold;
+    color: #fff;
+    background-color: $primaryColor;
+    padding: 20px 40px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: rgba(64, 163, 133, 1);
+    }
+  }
+}

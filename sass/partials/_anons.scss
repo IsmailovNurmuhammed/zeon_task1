@@ -1,0 +1,51 @@
+.anons{
+  margin: 0 auto;
+  max-width: 1347px;
+  min-height: 595px;
+  background: url('../../img/anons_main_bg.png') 100% no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 57px;
+  &__info{
+    max-width: 723px;
+    background-color: rgb(255, 255,255, 75%);
+    padding: 58px 87px;
+    text-align: center;
+    margin: 115px 0;
+    @include medium{
+      width: 50%;
+    }
+    &_title{
+      font-family: $primaryFont, serif;
+      text-transform: uppercase;
+      font-weight: $regular;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 26px;
+    }
+    &_text{
+      max-width: 549px;
+      font-size: 18px;
+      line-height: 23px;
+      font-family: $secondaryFont, serif;
+      font-weight: $regular;
+      margin-bottom: 40px;
+      letter-spacing: 1.5px;
+    }
+    &_btn{
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: $primaryFont, serif;
+      font-weight: $bold;
+      color: #fff;
+      background-color: $primaryColor;
+      padding: 20px 66px;
+      transition: 0.3s;
+      &:hover{
+        background-color: rgba(64, 163, 133, 1);
+      }
+    }
+  }
+}

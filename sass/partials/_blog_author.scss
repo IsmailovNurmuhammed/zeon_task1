@@ -1,0 +1,48 @@
+.blog__author {
+  background: #232323;
+  padding: 45px 0;
+}
+.blog__author_info {
+  margin: 0 auto;
+  max-width: 374px;
+}
+.blog__author_img {
+  text-align: center;
+  margin-bottom: 23px;
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+.blog__author_title {
+  text-transform: uppercase;
+  font-family: $primaryFont, serif;
+  color: #fff;
+  font-weight: $regular;
+  font-size: 38px;
+  line-height: 38px;
+  letter-spacing: 1.1px;
+  margin-bottom: 23px;
+}
+.blog__author_socials {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.socials__icon {
+  svg{
+    path{
+      transition: 0.3s ;
+    }
+  }
+  &:hover{
+    svg{
+      path{
+        fill: $primaryColor;
+      }
+    }
+  }
+}
