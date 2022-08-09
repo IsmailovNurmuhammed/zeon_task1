@@ -22,6 +22,11 @@
   font-weight: $regular;
   line-height: 20px;
   letter-spacing: 1.5px;
+  span{
+    @include very-small{
+      display: none;
+    }
+  }
   &:hover{
     color: $primaryColor;
     svg{
@@ -46,6 +51,11 @@
   height: 26px;
   transition: 0.3s;
   cursor: pointer;
+  @include medium{
+    &:nth-last-child(-n+2){
+      display: none; 
+    }
+  }
   &:hover{
     color: #fff;
     background-color: $primaryColor;

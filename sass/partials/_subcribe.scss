@@ -1,9 +1,13 @@
 .subcribe{
   background: #E2EEEA;
   &__content{
+    box-sizing: border-box;
     max-width: 791px;
     margin: 0 auto;
     padding: 65px 0;
+    @include large{
+      width: 90%;
+    }
    }
  }
 
@@ -34,12 +38,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include large{
+    flex-direction: column;
+    row-gap: 20px;
+  }
   input{
     padding: 0 26px;
     outline: none;
     border: none;
     height: 55px;
     border: 1px solid transparent;
+    font-family: $secondaryFont, serif;
+    line-height: 20px;
+    font-weight: $regular;
+    letter-spacing: 1.5px;
     &:focus{
       border: 1px solid $primaryColor;
     }
@@ -50,10 +62,16 @@
   .subcribe__form_name{
     width: 245px;
     box-sizing: border-box;
+    @include large{
+      width: 90%;
+    }
   }
   .subcribe__form_email{
     width: 368px;
     box-sizing: border-box;
+    @include large{
+      width: 90%;
+    }
   }
   .subcribe__form_btn{
     display: inline-block;
@@ -66,6 +84,8 @@
     transition: 0.3s;
     border: none;
     cursor: pointer;
+    letter-spacing: 1.1px;
+    font-size: 16px;
     &:hover{
       background-color: rgba(64, 163, 133, 1);
     }

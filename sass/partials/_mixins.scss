@@ -19,6 +19,11 @@
       @content;
   }
 }
+@mixin largeX {
+  @media screen and (max-width: 1150px) {
+    @content;
+}
+}
 @mixin notebook {
   @media screen and (max-width: 1440px) {
       @content;
@@ -31,8 +36,4 @@
   font-size: $textFs;
   font-weight: $regular;
   transition: 0.3s;
-  &:hover{
-    color: $primaryColor;
-    font-weight: $bold;
-  }
 }

@@ -24,3 +24,20 @@ li{
   margin: 0 auto;
   padding: 0 15px;  
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $primaryColor;
+  transition: 1s;
+  &:hover{
+    background-color: rgba(64, 163, 133, 1)
+  }
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #c0c0c0;
+}

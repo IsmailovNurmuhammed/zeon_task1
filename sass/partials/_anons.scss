@@ -9,13 +9,18 @@
   align-items: center;
   margin-bottom: 57px;
   &__info{
+    box-sizing: border-box;
     max-width: 723px;
     background-color: rgb(255, 255,255, 75%);
     padding: 58px 87px;
     text-align: center;
     margin: 115px 0;
     @include medium{
-      width: 50%;
+      width: 90%;
+      padding: 40px;
+    }
+    @include medium{
+      padding: 40px 20px;
     }
     &_title{
       font-family: $primaryFont, serif;
@@ -24,6 +29,9 @@
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 26px;
+      @include medium{
+        font-size: 22px;
+      }
     }
     &_text{
       max-width: 549px;
@@ -45,6 +53,13 @@
       transition: 0.3s;
       &:hover{
         background-color: rgba(64, 163, 133, 1);
+      }
+      @include medium{
+        width: 70%;
+        padding: 20px;
+      }
+      @include very-small{
+        font-size: 14px;
       }
     }
   }

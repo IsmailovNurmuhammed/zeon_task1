@@ -3,22 +3,36 @@
     grid-template-columns: 3fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    @include large{
+      grid-template-columns: 1fr;
+    }
 }
 .receipts {
   margin-bottom: 80px;
 }
 .receipts__filter {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 37px;
+  @include largeX{
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px
+  }
 }
 .receipts__filter_item {
   @include link;
   margin-right: 45px;
   line-height: 34px;
   letter-spacing: 1.5px;
-}
-.content__aside {
-  max-width: 277px;
+  transition: text-shadow .3s;
+  &:hover{
+    text-shadow: 0 0 1px $primaryColor, 0 0 1px $primaryColor;
+    color: $primaryColor;
+  }
+  @include large {
+    margin: 0;
+  }
 }
 
 .receipts__blogs {
@@ -29,6 +43,8 @@
 .receipts__blog {
   min-height: 221px;
   display: flex;
+  flex-wrap: wrap;
+
 }
 .receipts__blog_img {
   width: 224px;
@@ -36,6 +52,12 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  img{
+    width: 100%;
+  }
+  @include largeX{
+   margin: 0 auto;
+  }
   &:hover{
     .blog__img_tags{
       transform: translateX(0);
@@ -50,7 +72,7 @@
     height: 221px;
     padding: 28px 32px ;
     transition: 0.5s;
-    transform: translateX(-224px);
+    transform: translateX(-100%);
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
     .blog__img_tag{
       display: inline-block;
@@ -84,34 +106,64 @@
 .receipts__blog_info {
   max-width: 520px;
   padding: 28px 34px 49px 48px;
-
+  @include largeX{
+    margin: 0 auto;
+  }
+  @include large{
+    text-align: center;
+  }
 }
 .receipts__blog_title {
   text-transform: uppercase;
   font-weight: $bold;
   font-family: $secondaryFont, serif;
   font-size: $titleFs;
+  margin-bottom: 18px;
   line-height: 24px;
   letter-spacing: 1.1px;
-  margin-bottom: 17px;
 }
 .receipts__blog_text {
   font-family: $secondaryFont, serif;
   font-weight: $regular;
   line-height: 20px;
   letter-spacing: 1.5px;  
-  margin-bottom: 13px;
+  margin-bottom: 20px;
 }
 .receipts__blog_link {
   text-decoration: underline;
   font-family: $secondaryFont, serif;
   font-weight: $medium;
   transition: 0.3s;
+  letter-spacing: 1.1px;
   &:hover{
     color: $primaryColor;
   }
 }
 // ASIDE
+
+.aside {
+  width: 277px;
+  height: fit-content;
+  position: sticky;
+  top: 10px;
+  margin-bottom: 70px;
+  @include large{
+    transform: translateX(100%);
+    padding: 0 10px;
+    &.active{
+      transform: translateX(0%);
+    }
+  }
+  .aside__content{
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.5s;
+    margin-left: 15px;
+    @include large{
+    display: none;
+    }
+  }
+}
 
 .aside__links {
   width: 200px;
@@ -123,6 +175,7 @@
   margin-bottom: 58px;
 }
 .aside__link {
+  padding-top: 7px;
   svg{
     path{
       transition: 0.3s;
