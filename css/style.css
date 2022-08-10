@@ -523,6 +523,7 @@ body::-webkit-scrollbar-track {
 
 .aside {
   height: fit-content;
+  position: sticky;
   top: 10px;
   margin-bottom: 70px;
 }
