@@ -4,7 +4,7 @@
     box-sizing: border-box;
     max-width: 791px;
     margin: 0 auto;
-    padding: 65px 0;
+    padding: 64.5px 0;
     @include large{
       width: 90%;
     }
@@ -24,6 +24,11 @@
   text-align: center;
   letter-spacing: 1.1px;
   margin-bottom: 16px;
+  padding-left: 17px;
+  padding-top: 2px;
+  @include small{
+    font-size: 20px;
+  }
 }
 .subscribe__text {
   font-family: $secondaryFont, serif;
@@ -33,6 +38,8 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 1.5px;
+  padding-left: 15px;
+  padding-top: 2px;
 }
 .subcribe__form{
   display: flex;
@@ -56,7 +63,11 @@
       border: 1px solid $primaryColor;
     }
     &::placeholder{
+      font-size: $textFs;
+      font-family: 'Mulish', sans-serif;
       font-style: italic;
+      font-weight: 400;
+      letter-spacing: 1.1px;
     }
   }
   .subcribe__form_name{
@@ -80,12 +91,13 @@
     font-weight: $bold;
     color: #fff;
     background-color: $primaryColor;
-    padding: 20px 40px;
     transition: 0.3s;
     border: none;
     cursor: pointer;
     letter-spacing: 1.1px;
     font-size: 16px;
+    padding: 20px 41px;
+    transform: translateX(-1px);
     &:hover{
       background-color: rgba(64, 163, 133, 1);
     }

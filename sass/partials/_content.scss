@@ -4,11 +4,16 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     @include large{
-      grid-template-columns: 1fr;
+      display: block;
     }
 }
 .receipts {
   margin-bottom: 80px;
+  @include large{
+    margin-bottom: 40px;
+    border-bottom: 2px solid $primaryColor;
+    padding-bottom: 20px;
+  }
 }
 .receipts__filter {
   display: flex;
@@ -17,15 +22,24 @@
   @include largeX{
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 30px
+    column-gap: 30px;
+    border-bottom: 2px solid $primaryColor;
+    padding-bottom: 10px;
   }
+
 }
 .receipts__filter_item {
   @include link;
-  margin-right: 45px;
+  width: fit-content;
+  box-sizing: border-box;
+  margin-right: 44px;
   line-height: 34px;
+  text-shadow: 1px 1px 1px transparent;
   letter-spacing: 1.5px;
-  transition: text-shadow .3s;
+  transition: 0.3s all;
+  &:active{
+    color: $primaryColor;
+  }
   &:hover{
     text-shadow: 0 0 1px $primaryColor, 0 0 1px $primaryColor;
     color: $primaryColor;
@@ -44,7 +58,12 @@
   min-height: 221px;
   display: flex;
   flex-wrap: wrap;
-
+  @include medium {
+    width: auto;
+    margin: 0 auto;
+    border: 2px solid $primaryColor;
+    padding: 10px;
+  }
 }
 .receipts__blog_img {
   width: 224px;
@@ -105,22 +124,31 @@
 }
 .receipts__blog_info {
   max-width: 520px;
-  padding: 28px 34px 49px 48px;
+  padding:25px 34px 49px 48px;
   @include largeX{
     margin: 0 auto;
+    text-align: center;
   }
   @include large{
+    text-align: left;
+    padding: 30px 0;
+  }
+  @include medium{
+    padding: 20px;
     text-align: center;
   }
 }
 .receipts__blog_title {
   text-transform: uppercase;
   font-weight: $bold;
-  font-family: $secondaryFont, serif;
+  font-family: $primaryFont, serif;
   font-size: $titleFs;
-  margin-bottom: 18px;
-  line-height: 24px;
+  margin-bottom: 15px;
+  line-height: 30px;
   letter-spacing: 1.1px;
+  @include small{
+    font-size: 18px;
+  }
 }
 .receipts__blog_text {
   font-family: $secondaryFont, serif;
@@ -142,17 +170,12 @@
 // ASIDE
 
 .aside {
-  width: 277px;
   height: fit-content;
-  position: sticky;
+  // position: sticky;
   top: 10px;
   margin-bottom: 70px;
   @include large{
-    transform: translateX(100%);
-    padding: 0 10px;
-    &.active{
-      transform: translateX(0%);
-    }
+    width: 100%;
   }
   .aside__content{
     box-sizing: border-box;
@@ -160,7 +183,12 @@
     transition: 0.5s;
     margin-left: 15px;
     @include large{
-    display: none;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     }
   }
 }
@@ -172,7 +200,8 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 58px;
+  margin-bottom: 61px;
+  padding-left: 2px;
 }
 .aside__link {
   padding-top: 7px;
@@ -192,6 +221,11 @@
 
 .tags {
   padding-bottom: 66px;
+  @include large{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .tags__title {
   text-transform: uppercase;
@@ -199,13 +233,16 @@
   font-family: $primaryFont, serif;
   font-weight: $bold;
   letter-spacing: 1.1px;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 .tags__items {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 14px;
+  row-gap: 12px;
   column-gap: 13px;
+  @include large{
+    justify-content: center;
+  }
 }
 .tags__item {
   display: inline-block;
@@ -233,10 +270,19 @@
   }
 }
 .aside__about {
+  @include large{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    row-gap: 20px;
+    margin-bottom: 18px;
+  }
   img{
     width: 277px;
     height: 276px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 }
 .aside__about_title {

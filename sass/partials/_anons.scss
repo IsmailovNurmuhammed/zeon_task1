@@ -29,6 +29,10 @@
       font-size: 28px;
       line-height: 28px;
       margin-bottom: 26px;
+      text-align: center;
+      letter-spacing: 1.1px;
+      padding-top: 2px;
+      padding-left: 6px;
       @include medium{
         font-size: 22px;
       }
@@ -51,6 +55,8 @@
       background-color: $primaryColor;
       padding: 20px 66px;
       transition: 0.3s;
+      letter-spacing: 1.1px;
+      transform: translate(2px, 3px);
       &:hover{
         background-color: rgba(64, 163, 133, 1);
       }
