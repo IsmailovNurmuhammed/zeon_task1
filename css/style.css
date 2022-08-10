@@ -658,6 +658,7 @@ body::-webkit-scrollbar-track {
   font-family: "Mulish", serif;
   font-weight: 400;
   line-height: 20px;
+  padding-right: 14px;
   letter-spacing: 1.5px;
 }
 
