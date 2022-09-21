@@ -1,66 +1,66 @@
-.header-wrapper{
+.header-wrapper {
   width: 100%;
   height: 77px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
   margin-bottom: 32px;
 }
-.header{
+.header {
   height: 77px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-
 }
-.logo{
-  box-sizing: border-box  ;
+.logo {
+  box-sizing: border-box;
   text-transform: uppercase;
   font-family: $primaryFont, sans-serif;
   font-weight: $regular;
   font-size: 38px;
   letter-spacing: 1.1px;
   transform: translateY(4px);
-  @include medium{
+  @include medium {
     font-size: 30px;
   }
-  @include very-small{
+  @include very-small {
     white-space: normal;
     padding: 0 20px;
   }
 }
-.nav{
-  font-family: $secondaryFont ,serif;
+.nav {
+  font-family: $secondaryFont, serif;
   color: $gray;
   font-size: 18px;
+  @include large {
+    padding: 20px;
+  }
   &.active {
     transform: translateX(0);
-    padding: 20px;
     overflow: hidden;
-    
-    @include large{
+
+    @include large {
       transition: 0.5s;
     }
-      .nav__link{
-        width: fit-content;
-        position: relative;
-        &::before{
-          transition: 0.3s all;
-        }
-        &:hover{
-          &:before{
-            content: '';
-            width: 100%;
-            height: 2px;
-            background-color: $primaryColor;
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-          
+    .nav__link {
+      width: fit-content;
+      position: relative;
+      &::before {
+        transition: 0.3s all;
+      }
+      &:hover {
+        &:before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $primaryColor;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
         }
       }
     }
   }
-  @include large{
+  @include large {
     box-shadow: 10px 10px 20px 10px rgb(0 0 0 / 20%);
     display: flex;
     flex-direction: column;
@@ -73,29 +73,29 @@
     z-index: 3;
     background-color: #fff;
   }
-  @include medium{
+  @include medium {
     left: 30%;
   }
-  .nav__inner{
+  .nav__inner {
     max-width: 444px;
     display: flex;
     column-gap: 23px;
     justify-content: space-between;
-    @include large{
+    @include large {
       // display: flex;
       flex-direction: column;
     }
     .nav__link {
-      transition: text-shadow .3s;
+      transition: text-shadow 0.3s;
       letter-spacing: 1.5px;
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 27px;
       }
-      @include large{
+      @include large {
         margin-bottom: 20px;
       }
 
-      &:hover{
+      &:hover {
         color: $primaryColor;
         text-shadow: 0 0 1px $primaryColor, 0 0 1px $primaryColor;
       }
@@ -103,51 +103,51 @@
   }
 }
 
-.mobile__nav  {
-	width: 40px;
-	height: 40px;
-	position: relative;
-	z-index:2;
-	overflow: hidden;
+.mobile__nav {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
   cursor: pointer;
   display: none;
   z-index: 9;
 
-  @include large{
-     display: block;
-     position: absolute;
-     right: 20px;
+  @include large {
+    display: block;
+    position: absolute;
+    right: 20px;
   }
-  @include medium{
+  @include medium {
     width: 20px;
     height: 20px;
   }
 }
 
-.mobile__nav  span {
-	width: 40px;
-	height: 4px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #222222;
-	transition: all 0.5s;
-  @include medium{
+.mobile__nav span {
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+  @include medium {
     width: 20px;
     height: 2px;
   }
 }
 
 .mobile__nav span:nth-of-type(2) {
-	top: calc(50% - 10px);
-  @include medium{
+  top: calc(50% - 10px);
+  @include medium {
     top: calc(50% - 5px);
   }
 }
 .mobile__nav span:nth-of-type(3) {
-	top: calc(50% + 10px);
-  @include medium{
+  top: calc(50% + 10px);
+  @include medium {
     top: calc(50% + 5px);
   }
 }
@@ -158,11 +158,11 @@
 }
 .mobile__nav.active span:nth-of-type(2) {
   top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);  
+  transform: translate(-50%, 0%) rotate(45deg);
 }
 .mobile__nav.active span:nth-of-type(3) {
   top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg); 
+  transform: translate(-50%, 0%) rotate(-45deg);
 }
 
 /* Меню, которое будет появляться */

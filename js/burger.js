@@ -12,9 +12,6 @@ burger.addEventListener("click", function () {
 });
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener("click", function () {
-        burger.classList.contains("active")
-            ? (outside.style.overflow = "visible")
-            : (outside.style.overflow = "hidden");
         burger.classList.toggle("active");
         menu.classList.toggle("active");
     });

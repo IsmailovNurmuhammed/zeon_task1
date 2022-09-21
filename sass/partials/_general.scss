@@ -1,17 +1,17 @@
-body{
+body {
   background-color: #fff;
   color: $black;
   margin: 0;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-ul{
+ul {
   margin: 0;
   padding: 0;
 }
-li{
+li {
   list-style: none;
 }
 // *,
@@ -19,13 +19,13 @@ li{
 // *::before{
 //   box-sizing: border-box;
 // }
-.container{
-  max-width:1168px;
+.container {
+  max-width: 1168px;
   margin: 0 auto;
-  padding: 0 15px;  
+  padding: 0 15px;
 }
-.header-container{
-  max-width:1168px;
+.header-container {
+  max-width: 1168px;
   margin: 0 auto;
 }
 body::-webkit-scrollbar {
@@ -37,8 +37,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: $primaryColor;
   transition: 1s;
-  &:hover{
-    background-color: rgba(64, 163, 133, 1)
+  &:hover {
+    background-color: rgba(64, 163, 133, 1);
   }
 }
 
